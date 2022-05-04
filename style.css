@@ -1,0 +1,143 @@
+body {
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(29,29,29);
+    background-color: rgb(230, 230, 230);
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    height: 3rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0px 2px 10px rgb(44, 44, 44);   
+}
+
+.header p{
+    font-family: 'Water Brush', cursive;
+    font-size: 32px;
+    padding: 0;
+    margin: 0 1rem;
+}
+
+.header ul {
+    margin: 0 1rem;
+    list-style: none;
+    display: inline;
+}
+
+.header li {
+    display: inline-flex;
+    margin: 1rem;
+}
+
+.main {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+.thumbnails {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* gap: 0.2rem; */
+    justify-content: center;
+    align-content: center;
+}
+
+@media only screen and (max-width: 920px) {
+    .thumbnails {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media only screen and (max-width: 580px) {
+    .thumbnails {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        max-height: 3rem;
+        height: min-content;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+    
+}
+
+.thumbnail {
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* border-radius: 10px; */
+    /* box-shadow: -3px 3px 10px black; */
+}
+
+.thumbnail:hover {
+    cursor: pointer;
+    transform: translateY(-4px) translateX(2px);
+    box-shadow: -5px 5px 15px black;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 10px; */
+}
+
+.footer {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    background-color: rgb(230, 230, 230);
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.copyright {
+    margin-left: 1rem;
+}
+
+.contact {
+    margin-right: 1rem;
+}
+
+.footer img {
+    overflow: visible;
+    max-height: 160px;
+    max-width:fit-content;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.scroll-line {
+    background: linear-gradient(217deg, rgb(126, 201, 155), rgb(168, 224, 37) 50%),
+            linear-gradient(127deg, rgb(100, 167, 141), rgb(155, 196, 9) 50%),
+            linear-gradient(336deg, rgb(152, 189, 173), rgb(146, 156, 4) 50%);
+      top: 0;
+      left: 0;
+      height: 55px;
+      position: fixed;
+      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }

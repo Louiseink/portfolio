@@ -39,6 +39,29 @@ body {
     margin: 1rem;
 }
 
+.header a,
+.footer a {
+    text-decoration: none;
+    color: rgb(29,29,29);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.header a:after,
+.footer a:after {
+    content:'';
+    display: block;
+    border-bottom: 2px solid rgb(152, 189, 173);
+    transition: 1s ease;
+    width: 0;
+}
+
+.header a:hover:after,
+.footer a:hover:after {
+    /* border-bottom: 1px solid rgb(29,29,29); */
+    width: 100%;
+}
+
 .main {
     margin-top: 4rem;
     margin-bottom: 8rem;

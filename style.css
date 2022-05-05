@@ -3,6 +3,7 @@ body {
     font-family: 'Oswald', sans-serif;
     color: rgb(29,29,29);
     background-color: rgb(230, 230, 230);
+    margin: 0;
 }
 
 .header {
@@ -18,7 +19,8 @@ body {
     justify-content: space-between;
     border-bottom: 1px solid black;
     background-color: rgb(230, 230, 230);
-    box-shadow: 0px 2px 10px rgb(44, 44, 44);   
+    box-shadow: 0px 2px 10px rgb(44, 44, 44);
+    opacity: .9;
 }
 
 .header p{
@@ -108,11 +110,6 @@ body {
         height: 3rem;
     }
 
-    /* .header p {
-        font-size: 20px;
-        
-    } */
-
     .big {
         display: none;
     }
@@ -129,27 +126,29 @@ body {
     .smallmenu {
         display:inline-block;
         position: fixed;
-        top: 2rem;
-        right: 0.7rem;
+        top: 8px;
+        right: 0;
         z-index: 1;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0;
         background-color: rgb(230, 230, 230);
-        border: 1px solid black;
-        border-width: 0 1px 1px;
-        ;
+        border: 1px solid rgb(29,29,29);
+        border-width: 0 0 1px 1px;
+        font-size: 40px;
     }
 
     
 
     .smallmenu li{
         list-style: none;
-        
+        padding: 1rem 2rem;
+        margin-left: 0;
+        border-bottom: 1px solid rgb(29,29,29);
     }
 
     .smallmenu a {
         text-decoration: none;
         color: rgb(29,29,29);
+        font-weight: 200;
     }
 
     #menuicon {
@@ -212,6 +211,7 @@ body {
     background-color: rgb(230, 230, 230);
     align-items: flex-end;
     z-index: 10;
+    opacity: .9;
 }
 
 .copyright {
@@ -232,12 +232,12 @@ body {
     display: none;
 }
 .scroll-line {
-    background: linear-gradient(217deg, rgb(126, 201, 155), rgb(168, 224, 37) 50%),
-            linear-gradient(127deg, rgb(100, 167, 141), rgb(155, 196, 9) 50%),
-            linear-gradient(336deg, rgb(152, 189, 173), rgb(146, 156, 4) 50%);
-      top: 0;
+    background: linear-gradient(240deg, rgba(255, 46, 227, 0.74), rgba(51, 248, 189, 0.801) 100%),
+            linear-gradient(120deg, rgba(110, 48, 255, 0.493), rgba(46, 196, 9, 0.432) 100%),
+            linear-gradient(0deg, rgb(255, 79, 79), rgb(238, 255, 3) 100%);
+      top: 40px;
       left: 0;
-      height: 55px;
+      height: 20px;
       position: fixed;
       transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }

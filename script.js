@@ -19,24 +19,29 @@ menu.style.opacity = 0;
 menu.style.zIndex = 100;
 
 function showMenu() {
-  let menuOpac = parseInt(menu.style.opacity);
-  if (menuOpac < 100) {
-    menu.style.transition = 'all .3s ease-in';
-    menu.style.opacity = 100;
-    
-  } else {
-    menu.style.transition = 'all .3s ease-in';
-    menu.style.opacity = 0;
-  }
+  let menuOpac = parseFloat(menu.style.opacity);
+  
+  setTimeout(function() {
+    if (menuOpac === 0) {
+      menu.style.transition = 'all .3s ease-in';
+      menu.style.opacity = .9;
+      
+    } else {
+      menu.style.transition = 'all .3s ease-in';
+      menu.style.opacity = 0;
+    }
+  }, 1);
+  
 }
 
 function hideMenu() {
-  let menuOpac = parseInt(menu.style.opacity);
-  if (menuOpac > 1) {
+  let menuOpac = parseFloat(menu.style.opacity);
+  if (menuOpac != 0) {
     menu.style.transition = 'all .3s ease-in';
     menu.style.opacity = 0;
   }
 }
-
+document.addEventListener('click', hideMenu);
+document.addEventListener('scroll', hideMenu);
 menuButton.addEventListener('click', showMenu);
-document.addEventListener('mousedown', hideMenu);
+

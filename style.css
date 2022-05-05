@@ -40,7 +40,8 @@ body {
 }
 
 .header a,
-.footer a {
+.footer a,
+.smallmenu a {
     text-decoration: none;
     color: rgb(29,29,29);
     padding-bottom: 0;
@@ -48,7 +49,8 @@ body {
 }
 
 .header a:after,
-.footer a:after {
+.footer a:after,
+.smallmenu a:after {
     content:'';
     display: block;
     border-bottom: 2px solid rgb(152, 189, 173);
@@ -57,7 +59,8 @@ body {
 }
 
 .header a:hover:after,
-.footer a:hover:after {
+.footer a:hover:after,
+.smallmenu a:hover:after {
     /* border-bottom: 1px solid rgb(29,29,29); */
     width: 100%;
 }

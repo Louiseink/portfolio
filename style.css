@@ -28,13 +28,13 @@ body {
     margin: 0 1rem;
 }
 
-.header ul {
+.bigmenu {
     margin: 0 1rem;
     list-style: none;
     display: inline;
 }
 
-.header li {
+.bigmenu li {
     display: inline-flex;
     margin: 1rem;
 }
@@ -77,6 +77,18 @@ body {
     align-content: center;
 }
 
+.big {
+    display: block;
+}
+
+.small {
+    display: none;
+}
+
+.smallmenu {
+    display: none;
+}
+
 @media only screen and (max-width: 920px) {
     .thumbnails {
         grid-template-columns: 1fr 1fr;
@@ -90,17 +102,79 @@ body {
     }
 
     .header {
-        max-height: 3rem;
-        height: min-content;
+        height: 3rem;
     }
 
-    .header p {
-        font-size: 16px;
+    /* .header p {
+        font-size: 20px;
+        
+    } */
+
+    .big {
+        display: none;
     }
+
+    .small {
+        display:block;
+        font-size: 24px;
+    }
+
+    .bigmenu {
+        display: none;
+    }
+
+    .smallmenu {
+        display:inline-block;
+        position: fixed;
+        top: 2rem;
+        right: 0.7rem;
+        z-index: 1;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: rgb(230, 230, 230);
+        border: 1px solid black;
+        border-width: 0 1px 1px;
+        ;
+    }
+
+    
+
+    .smallmenu li{
+        list-style: none;
+        
+    }
+
+    .smallmenu a {
+        text-decoration: none;
+        color: rgb(29,29,29);
+    }
+
+    #menuicon {
+        /* background: url('https://api.iconify.design/eva/menu-fill.svg') no-repeat center center / contain; */
+        content: url('https://api.iconify.design/eva/menu-fill.svg?width=30&height=30');
+        margin-right: 2rem;
+        transition: filter .5s ease;
+        
+    }
+
+    #menuicon:hover {
+        filter: drop-shadow(2px 3px 2px rgb(0 0 0 / 0.4));
+        cursor: pointer;
+    }
+
+    #menuicon:active {
+        transform: translateY(1px) translateX(1px);
+    }
+
 
     .footer p {
         font-size: 12px;
+        overflow: auto;
     }
+
+    /* .header ul {
+        display: none;
+    } */
     
 }
 

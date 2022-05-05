@@ -6,6 +6,19 @@ body {
     margin: 0 1px;
 }
 
+.whitescreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background: rgb(44, 44, 44);
+    z-index: 1000;
+    transition: all .3s ease-out;
+}
+
 .header {
     position: fixed;
     display: flex;

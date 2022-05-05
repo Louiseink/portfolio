@@ -45,3 +45,10 @@ document.addEventListener('click', hideMenu);
 document.addEventListener('scroll', hideMenu);
 menuButton.addEventListener('click', showMenu);
 
+window.onload = function(){
+  let el = document.querySelector('.whitescreen');
+  el.style.opacity = 0;
+  setTimeout(function(){
+    el.style.display = 'none';
+  },200);
+}

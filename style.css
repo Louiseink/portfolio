@@ -204,18 +204,22 @@ body {
     } */
     
 }
-
-.thumbnail {
-    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    border-radius: 5px;
-    /* box-shadow: -3px 3px 10px black; */
+@media only screen and (min-width: 920px){
+    .thumbnail {
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        border-radius: 5px;
+        /* box-shadow: -3px 3px 10px black; */
+    }
+    
+    .thumbnail:hover {
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+        transform: scale(1.2);
+        box-shadow: -5px 5px 15px black;
+        z-index: 50;
+    }
 }
 
-.thumbnail:hover {
-    cursor: pointer;
-    transform: translateY(-4px) translateX(2px);
-    box-shadow: -5px 5px 15px black;
-}
 
 .thumbnail img {
     max-width: 100%;

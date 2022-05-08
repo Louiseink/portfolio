@@ -1,6 +1,7 @@
 body {
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Oswald', sans-serif;
+    font-weight: 300;
     color: rgb(29,29,29);
     background-color: rgb(230, 230, 230);
     margin: 0 1px;
@@ -160,6 +161,7 @@ body {
         overflow: visible;
         right: -5%;
         top: 67%;
+        pointer-events: none;
     }
     
 
@@ -239,7 +241,7 @@ body {
     justify-content: space-between;
     border-top: 2px solid rgb(44, 44, 44);
     background-color: rgb(230, 230, 230);
-    align-items: flex-end;
+    align-items: center;
     z-index: 10;
     opacity: .9;
 }
@@ -255,7 +257,12 @@ body {
 .footer img {
     overflow: visible;
     max-height: 160px;
-    max-width:fit-content;
+    max-width: fit-content;
+    position: absolute;
+    left: 50%;
+    bottom: -170%;
+    transform: translate(-50%, -50%);
+    
 }
 
 ::-webkit-scrollbar {
